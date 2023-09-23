@@ -15,6 +15,7 @@ function App() {
     try {
       dispatch(ShowLoading());
       const response = await axios.get("/api/portfolio/get-portfolio-data");
+      console.log(response.data);
       dispatch(SetPortfolioData(response.data));
       dispatch(HideLoading());
     } catch (error) {
@@ -26,7 +27,7 @@ function App() {
     if (!portfolioData) {
       getPortfolioData();
     }
-  }, [portfolioData]);
+  }, []);
 
   return (
     <BrowserRouter>
