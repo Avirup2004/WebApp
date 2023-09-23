@@ -1,12 +1,12 @@
 const router = require("express").Router();
 
-const {
+import {
   About,
   Intro,
   Product,
   Experience,
   Contact,
-} = require("../models/portfolioModel");
+} from "../models/portfolioModel";
 
 router.get("/get-portfolio-data", async (req, res) => {
   try {
@@ -27,4 +27,4 @@ router.get("/get-portfolio-data", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
