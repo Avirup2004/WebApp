@@ -4,8 +4,7 @@ import { useSelector } from "react-redux";
 
 function About() {
   const { portfolioData } = useSelector((state) => state.root);
-  const { About } = portfolioData;
-  const { skills, lottieURL, description1, descrption2 } = About;
+  const { skills, lottieURL, description1, descrption2 } = portfolioData;
   return (
     <div>
       <SectionTitle title="About" />

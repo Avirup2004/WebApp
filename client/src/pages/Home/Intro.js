@@ -2,9 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Intro() {
-  const { loading, portfolioData } = useSelector((state) => state.root);
-  const { intro } = portfolioData;
-  const { firstName, lastName, welcomeText, discription, caption } = intro;
+  const { portfolioData } = useSelector((state) => state.root);
+
+  const { firstName, lastName, welcomeText, discription, caption } =
+    portfolioData;
   return (
     <div className="h-[80vh] bg-primary flex flex-col items-start justify-center gap-8 py-10">
       <h1 className="text-white">{welcomeText || ""}</h1>
